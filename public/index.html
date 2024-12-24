@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/3da1a747b2.js"></script>
+    <title>Chat App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <main role="main" class="container pt-5">
+      <!-- Username Input -->
+      <div class="form-groups w-100 mb-4" id="user-info">
+        <input
+          type="text"
+          placeholder="Your username"
+          id="username"
+          class="form-control d-inline-block w-75"
+        />
+        <button id="setUsername" class="btn btn-primary d-inline-block w-25">
+          Start!
+        </button>
+      </div>
+
+      <!-- Chat Container -->
+      <div id="chat-container" class="d-flex flex-column">
+        <!-- Message Display -->
+        <div
+          id="messages"
+          class="flex-grow-1 overflow-auto p-3 border mb-2"
+        ></div>
+      </div>
+
+      <!-- Input Bar -->
+      <form id="input-form" class="input-bar">
+        <input
+          id="txt"
+          type="text"
+          placeholder="Enter Message"
+          class="form-control flex-grow-1 me-2"
+          autofocus
+          autocomplete="off"
+        />
+        <button
+          id="sendMessage"
+          type="submit"
+          class="btn btn-primary flex-shrink-0"
+        >
+          Send
+        </button>
+      </form>
+    </main>
+
+    <script src="assets/scripts.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+  </body>
+</html>
